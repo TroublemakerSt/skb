@@ -5,9 +5,9 @@ import canonize from './canonize';
 const app = express();
 
 app.get('/', (req, res) => {
-	const username = canonize(req.query.url);
+	const username = canonize(req.query.username);
 	res.json({
-		url: req.query.url,
+		username: req.query.username,
 		username,
 	});
 });
